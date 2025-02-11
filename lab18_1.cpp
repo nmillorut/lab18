@@ -14,5 +14,5 @@ double overlap(Rect R1, Rect R2){
 int main(){
 	Rect R1 = {-1,2,6.9,9.6};
 	Rect R2 = {0,0,1.2,2.5};
-	cout << overlap(&R1,&R2);
+	cout << overlap(R1,R2);
 }
