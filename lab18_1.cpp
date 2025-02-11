@@ -5,9 +5,9 @@ struct Rect{
 	double x,y,w,h;
 };
 
-double overlap(Rect *a,Rect *b){
-	double xw = max(0.0,min(a->x+a->w,b->x+b->w)-max(a->x,b->x));
-	double yh = max(0.0,min(a->y,b->y)-max(a->y-a->h,b->y-b->h));
+double overlap(Rect R1, Rect R2){
+	double xw = max(0.0,min(R1.x+R1.w,R2.x+R2.w)-max(R1.x,R2.x));
+	double yh = max(0.0, min(R1.y,R2.y)-max(R1.y-R1.h,R2.y-R2.h));
 	if (xw<=0 || yh<=0) { return 0;}
 	else{return xw*yh;}
 }
